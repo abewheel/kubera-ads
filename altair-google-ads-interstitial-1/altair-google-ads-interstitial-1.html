@@ -64,14 +64,14 @@
     .gwd-taparea-f9dt {
       position: absolute;
       left: 0%;
-      top: 0%;
       width: 100%;
       height: 100%;
+      top: 0%;
     }
     .gwd-image-dcbl {
-      left: 0%;
       top: 0%;
       width: 100%;
+      left: 3.13%;
     }
     .gwd-page-1c3e {
       background-image: none;
@@ -79,36 +79,39 @@
       width: 320px;
       height: 480px;
     }
-    .gwd-p-12e3 {
-      color: rgb(255, 255, 255);
-      font-family: Roboto;
-      font-size: 25px;
-      font-weight: 500;
+    .gwd-div-15sj {
+      width: 320px;
+      height: 480px;
     }
-    .gwd-h1-1jgk {
-      font-family: Roboto;
-      color: rgb(255, 255, 255);
-      font-weight: normal;
-      font-size: 12px;
-      margin-top: 15px;
-    }
-    .gwd-p-qsg6 {
+    .gwd-p-1rz4 {
       background-color: rgb(0, 123, 255);
       border-radius: 15px;
       font-family: Roboto;
       color: rgb(255, 255, 255);
       text-align: center;
-      padding: 8px 16px;
+      padding: 8px;
       font-weight: 500;
-      margin-top: 15px;
       font-size: 14px;
+      margin: 0px 15px;
     }
-    .gwd-div-1x1y {
-      padding: 15px;
+    .gwd-p-1nny {
+      position: absolute;
+      font-family: Roboto;
+      color: rgb(255, 255, 255);
+      font-weight: normal;
+      font-size: 12px;
+      margin: 5px;
+      left: 10px;
+      top: 264px;
     }
-    .gwd-div-10eh {
-      width: 320px;
-      height: 480px;
+    .gwd-div-1u9c {
+      background-image: none;
+      background-color: rgb(0, 0, 0);
+      padding-bottom: 15px;
+      left: 0%;
+      top: 0%;
+      width: 100%;
+      height: 100%;
     }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
@@ -135,10 +138,10 @@
     // Support code for event handling in Google Web Designer
     // This script block is auto-generated. Please do not edit!
     gwd.actions.events.registerEventHandlers = function(event) {
-      gwd.actions.events.addHandler('tap-area', 'action', gwd.auto_Gwd_taparea_1Action, false);
+      gwd.actions.events.addHandler('primary-tap-area', 'action', gwd.auto_Gwd_taparea_1Action, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
-      gwd.actions.events.removeHandler('tap-area', 'action', gwd.auto_Gwd_taparea_1Action, false);
+      gwd.actions.events.removeHandler('primary-tap-area', 'action', gwd.auto_Gwd_taparea_1Action, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -150,18 +153,17 @@
   <gwd-data-binder id="gwd-data-binder_1"></gwd-data-binder>
   <gwd-google-ad id="gwd-ad" polite-load="" data-provider="gpa-data-provider">
     <gwd-metric-configuration>
-      <gwd-metric-event source="tap-area" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
+      <gwd-metric-event source="primary-tap-area" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
     </gwd-metric-configuration>
     <gwd-pagedeck class="gwd-page-container" id="pagedeck">
       <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox gwd-page-1c3e" data-gwd-width="320px" data-gwd-height="480px">
-        <div class="gwd-page-content gwd-page-size gwd-div-10eh">
-          <gwd-image id="primary-image" source="assets/Altair_800x800.png" scaling="stretch" class="gwd-image-dcbl"></gwd-image>
-          <div id="text-content" class="gwd-div-1x1y">
-            <h1 class="gwd-p-12e3" id="title">Altair</h1>
-            <p class="gwd-h1-1jgk" id="desc">You control a planet. So do they. Who will conquer the galaxy?</p>
-            <p class="gwd-p-qsg6" id="cta">Download</p>
+        <div class="gwd-page-content gwd-page-size gwd-div-15sj">
+          <div id="primary-content" class="gwd-div-1u9c">
+            <gwd-image id="primary-image" source="assets/Altair_800x800.png" scaling="stretch" class="gwd-image-dcbl"></gwd-image>
+            <p class="gwd-p-1nny" id="desc">You control a planet. So do they. Who will conquer the galaxy?</p>
+            <p class="gwd-p-1rz4" id="cta">Play</p>
+            <gwd-taparea id="primary-tap-area" class="gwd-taparea-f9dt"></gwd-taparea>
           </div>
-          <gwd-taparea id="tap-area" class="gwd-taparea-f9dt"></gwd-taparea>
         </div>
       </gwd-page>
     </gwd-pagedeck>
